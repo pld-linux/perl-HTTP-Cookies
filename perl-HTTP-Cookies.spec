@@ -22,6 +22,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-HTTP-Date >= 6
 BuildRequires:	perl-HTTP-Message >= 6
 %endif
+Requires:	perl-HTTP-Date >= 6
+Requires:	perl-HTTP-Message >= 6
 Conflicts:	perl-libwww < 6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -75,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes
 %{perl_vendorlib}/HTTP/Cookies.pm
 %{perl_vendorlib}/HTTP/Cookies
 %{_mandir}/man3/HTTP::Cookies*.3pm*
