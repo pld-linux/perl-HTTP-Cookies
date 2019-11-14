@@ -8,13 +8,13 @@
 Summary:	HTTP::Cookies - HTTP cookie jars
 Summary(pl.UTF-8):	HTTP::Cookies - pojemnik na ciasteczka HTTP
 Name:		perl-HTTP-Cookies
-Version:	6.04
+Version:	6.06
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/HTTP/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7bf1e277bd5c886bc18d21eb8423b65f
+# Source0-md5:	1edfc54f36cb7eb192637c553d0eab7f
 URL:		http://search.cpan.org/dist/HTTP-Cookies/
 BuildRequires:	perl-devel >= 1:5.8.8
 BuildRequires:	rpm-perlprov >= 4.1-13
