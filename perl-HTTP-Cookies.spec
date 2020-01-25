@@ -4,7 +4,6 @@
 #
 %define		pdir	HTTP
 %define		pnam	Cookies
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTTP::Cookies - HTTP cookie jars
 Summary(pl.UTF-8):	HTTP::Cookies - pojemnik na ciasteczka HTTP
 Name:		perl-HTTP-Cookies
