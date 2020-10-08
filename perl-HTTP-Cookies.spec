@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	HTTP
 %define		pnam	Cookies
@@ -14,12 +14,15 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/HTTP/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8c663710244e70c85775393a8f5be443
-URL:		http://search.cpan.org/dist/HTTP-Cookies/
+URL:		https://metacpan.org/release/HTTP-Cookies
 BuildRequires:	perl-devel >= 1:5.8.8
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-HTTP-Date >= 6
 BuildRequires:	perl-HTTP-Message >= 6
+BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-URI
 %endif
 Requires:	perl-HTTP-Date >= 6
 Requires:	perl-HTTP-Message >= 6
@@ -76,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes
+%doc CONTRIBUTORS Changes
 %{perl_vendorlib}/HTTP/Cookies.pm
 %{perl_vendorlib}/HTTP/Cookies
 %{_mandir}/man3/HTTP::Cookies*.3pm*
